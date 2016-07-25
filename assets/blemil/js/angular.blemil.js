@@ -43,10 +43,10 @@ app.controller('HomeController', function ($scope) {
     $scope.data = "Ở xin chào đây là trang chủ";
 });
 //About us
-app.controller('AboutController', function ($scope) {
+app.controller('AboutController', 'myService', function ($scope, myService) {
     $scope.data = "Ở xin chào đây trang about us";
 });
-app.controller('ContactController', function ($scope) {
+app.controller('ContactController', 'myService', function ($scope, myService) {
     $scope.data = "Ở xin chào đây trang liên hệ";
 });
 

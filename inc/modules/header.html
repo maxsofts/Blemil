@@ -1,8 +1,11 @@
 <header>
     <nav>
         <div class="nav-wrapper container">
-            <ul ng-repeat="menu in $ctrl.menus" class="left hide-on-med-and-down">
-                <li>
+            <a class="brand-logo">
+                LOGO
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li ng-repeat="menu in $ctrl.menus" >
                     <a href="{{menu.link}}">
                         {{menu.name}}
                     </a>
