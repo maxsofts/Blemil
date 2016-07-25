@@ -40,16 +40,13 @@ app.run(['$location', '$rootScope', function ($location, $rootScope) {
  */
 //Home
 app.controller('HomeController', function ($scope) {
-    //$scope.title = "Trang chủ";
     $scope.data = "Ở xin chào đây là trang chủ";
 });
 //About us
 app.controller('AboutController', function ($scope) {
-    //$scope.title = "Giới thiệu";
     $scope.data = "Ở xin chào đây trang about us";
 });
 app.controller('ContactController', function ($scope) {
-    //$scope.title = "Liên hệ";
     $scope.data = "Ở xin chào đây trang liên hệ";
 });
 
@@ -64,7 +61,7 @@ app.component('comHeader', {
         this.menus = [
             {
                 name: "Trang chủ",
-                link: "/#!"
+                link: "#!/"
             },
             {
                 name: "Giới thiệu",
