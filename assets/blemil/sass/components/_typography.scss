@@ -1,0 +1,22 @@
+/* Fonts
+   ========================================================================== */
+$fonts: (
+        'lato-thin':"Lato thin",
+        'lato-black':"Lato black",
+        'lato-light':"Lato light",
+        'lato-regular':"Lato regular",
+        'billy-bold':"Billy bold",
+        'ionicons':"Ionicons",
+);
+
+@each $font-name, $font-call in $fonts {
+  @font-face {
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: 400;
+    src: local($font-call), local($font-name), url('../fonts/#{$font-name}.tff') format('ttf');
+  }
+  .#{$font-name}-text {
+    font-family: $font-name, "Roboto", sans-serif;
+  }
+}
