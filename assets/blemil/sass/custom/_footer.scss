@@ -1,0 +1,22 @@
+@mixin bold{
+  text-transform:uppercase;
+  font-weight: bold;
+}
+.blemil-footer{
+  background: $blemil-blue !important;
+ .blemil-footer-left{
+   color:$blemil-white !important;
+   h5{
+     @include bold;
+   }
+   .blemil-footer-information{
+     li{
+       padding: 5px 0px;
+     .small-blemil-footer-information{
+       margin-bottom:0px !important;
+     }
+     }
+   }
+
+ }
+}

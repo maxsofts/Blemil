@@ -1,0 +1,7 @@
+$min-size:10;
+$max-size:30;
+@for $i from $min-size through $max-size{
+  .font-size-#{$i}{
+    font-size:#{$i}px;
+  }
+}
