@@ -1,4 +1,6 @@
-$blemil-white:#fff;
-$blemil-black:#000;
-$blemil-blue:#1b75bc;
-$blemil-orange:#ec008c;
+$blemil-white: color('shades', 'white') !default;
+$blemil-black: color('shades', 'black') !default;
+$blemil-blue: color('blemil-primary', 'base') !default;
+$blemil-orange: color('shades', 'orange') !default;
+$blemil-green: color('shades', 'green') !default;
+$blemil-bluesecond: color('shades', 'bluesecond') !default;

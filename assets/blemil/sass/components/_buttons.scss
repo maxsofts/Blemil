@@ -1,0 +1,10 @@
+/*
+author:Congdonglangsoi
+*/
+$min-radius:1;
+$max-radius:20;
+@for $i from $min-radius through $max-radius{
+  .border-radius-#{$i}{
+    border-radius:#{$i}px;
+  }
+}

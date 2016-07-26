@@ -9,17 +9,20 @@ app.config(['$locationProvider', '$routeProvider',
             .when('/', {
                 templateUrl: 'inc/pages/home.html',
                 controller: 'HomeController',
-                title: 'Trang chủ'
+                title: 'Trang chủ',
+                active: true
             })
             .when('/about', {
                 templateUrl: 'inc/pages/about.html',
                 controller: 'AboutController',
-                title: 'Giới thiệu'
+                title: 'Giới thiệu',
+                active: true
             })
             .when('/contact', {
                 templateUrl: 'inc/pages/contact.html',
                 controller: 'ContactController',
-                title: 'Liên hệ'
+                title: 'Liên hệ',
+                active: true
             })
             .otherwise({
                 redirectTo: '/'
@@ -43,10 +46,10 @@ app.controller('HomeController', function ($scope) {
     $scope.data = "Ở xin chào đây là trang chủ";
 });
 //About us
-app.controller('AboutController', function ($scope) {
+app.controller('AboutController', 'myService', function ($scope, myService) {
     $scope.data = "Ở xin chào đây trang about us";
 });
-app.controller('ContactController', function ($scope) {
+app.controller('ContactController', 'myService', function ($scope, myService) {
     $scope.data = "Ở xin chào đây trang liên hệ";
 });
 
@@ -57,19 +60,38 @@ app.controller('ContactController', function ($scope) {
 //Header
 app.component('comHeader', {
     'templateUrl': 'inc/modules/header.html',
+
     controller: function blemil_header() {
+
         this.menus = [
             {
-                name: "Trang chủ",
-                link: "#!/"
+                name: "Về BT Foods",
+                link: "#!/about",
             },
             {
-                name: "Giới thiệu",
-                link: "#!/about"
+                name: "Câu truyện Blemil Plus",
+                link: "#!/truyen",
+            },
+            {
+                name: "Tìm hiểu Blemil Plus",
+                link: "#!/truyen",
+            },
+            {
+                name: "Quà tặng bé yêu",
+                link: "#!/truyen",
+            },
+            {
+                name: "Mua Blemil ở đâu",
+                link: "#!/truyen",
+            },
+            {
+                name: "Tin tức",
+                link: "#!/contact",
             },
             {
                 name: "Liên hệ",
-                link: "#!/contact"
+                link: "#!/contact",
+                active: false
             }
         ]
     }

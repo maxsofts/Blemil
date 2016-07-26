@@ -1,8 +1,4 @@
-@mixin bold{
-  text-transform:uppercase;
-  font-weight: bold;
-}
-$blemil-footer-margin:5px 0px;
+$blemil-footer-margin:7px 0px;
 .blemil-footer{
   background: $blemil-blue !important;
  .blemil-footer-left{
@@ -18,7 +14,9 @@ $blemil-footer-margin:5px 0px;
      }
      }
    }
-
+.blemil-footer-top{
+  padding-top: 13px;
+}
  }
   .blemil-footer-right{
      .button-register{
@@ -27,6 +25,9 @@ $blemil-footer-margin:5px 0px;
     .blemil-footer-right-social{
       ul.nav-menu .list-menu{
         padding:0px 10px;
+        &:last-child{
+          padding-left: 42px;
+        }
       }
       margin-top:95px;
       .first-li{
@@ -36,6 +37,46 @@ $blemil-footer-margin:5px 0px;
         padding:$blemil-footer-margin;
         a{color:$blemil-white;}
       }
+      .social{
+        li{
+        text-align: left;
+          .box-soical{
+            width: 35px;
+            text-align: center !important;
+          };
+        }
+      }
+    }
+    .blemil-footer-email-register{
+      .value-input{
+        background: #fff;
+        color: #b5b5b5;
+        padding:0px 0px 0px 16px !important;
+        width: 90%;
+        height: 2.3rem ;
+      }
+
+    }
+  }
+  .backtop{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 83px;
+    left: 54px;
+    padding:5px;
+    .small-backtop{
+      width:100%;
+      height: 100%;
+      border:1px  dashed #1b75bc;
+      a{
+        color:#67a0d0 !important;
+        line-height: 57px;
+        i{
+        transform:rotate(-90deg);
+        }
+      }
     }
   }
 }
+
