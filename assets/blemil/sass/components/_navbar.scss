@@ -1,7 +1,7 @@
 .blemil-nav-top {
   background: -moz-linear-gradient(90deg, lighten($blemil-blue, 15%) 0%, $blemil-blue 100%);
-  background: -webkit-linear-gradient(90deg,  lighten($blemil-blue, 15%) 0%, $blemil-blue 100%);
-  background: -ms-linear-gradient(90deg,  lighten($blemil-blue, 15%) 0%, $blemil-blue 100%);
+  background: -webkit-linear-gradient(90deg, lighten($blemil-blue, 15%) 0%, $blemil-blue 100%);
+  background: -ms-linear-gradient(90deg, lighten($blemil-blue, 15%) 0%, $blemil-blue 100%);
   font-family: "lato-bold", "Roboto", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -11,7 +11,7 @@
       max-width: 120px;
     }
   }
-  ul {
+  ul.large-screens {
     display: table;
     li {
       max-height: 64px;
@@ -24,7 +24,7 @@
         text-align: center;
         padding-right: 10px;
         padding-left: 10px;
-        max-width: 110px;
+        max-width: 105px;
         overflow: hidden;
         position: relative;
         vertical-align: middle;
@@ -35,6 +35,13 @@
         &:hover {
           background: transparent;
         }
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 9px;
+          padding-right: 5px;
+          padding-left: 5px;
+          max-width: 80px;
+        }
       }
 
       &.active, &:hover {
@@ -43,5 +50,20 @@
       }
     }
   }
-
+  .small-screens {
+    .search {
+      background: $blemil-blue;
+      text-align: center;
+      a {
+        color: $blemil-white;
+      }
+    }
+    ul {
+      li {
+        a {
+          font-size: .85rem;
+        }
+      }
+    }
+  }
 }

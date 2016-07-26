@@ -62,14 +62,20 @@ app.component('comHeader', {
     'templateUrl': 'inc/modules/header.html',
 
     controller: function blemil_header() {
-
+        $('.modal-trigger').leanModal({
+            starting_top: '4%', // Starting top style attribute
+            ending_top: '10%' //, // Ending top style attribute
+        });
+        $(".button-collapse").sideNav({
+            edge: 'right'
+        });
         this.menus = [
             {
                 name: "Về BT Foods",
                 link: "#!/about",
             },
             {
-                name: "Câu truyện Blemil Plus",
+                name: "Câu chuyện Blemil Plus",
                 link: "#!/truyen",
             },
             {

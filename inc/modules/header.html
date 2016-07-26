@@ -1,29 +1,67 @@
 <header>
+    <!-- Menu top -->
     <nav class="blemil-nav-top">
         <div class="nav-wrapper container">
             <a class="brand-logo">
                 <img src="assets/blemil/images/header/logo.png" alt="Logo" class="responsive-img"/>
             </a>
-            <ul class="right hide-on-med-and-down">
+            <a href="#" data-activates="mobile-demo" class="button-collapse right"><i
+                    class="material-icons">menu</i></a>
+            <!-- menu for large screens -->
+            <ul class="right hide-on-med-and-down large-screens">
                 <li class="active">
-                    <a href="#!/" class="waves-effect waves-light">
+                    <a href="#!/">
                         <i class="material-icons small">home</i>
                     </a>
                 </li>
                 <li ng-repeat="menu in $ctrl.menus">
-                    <a href="{{menu.link}}" class="waves-effect waves-light">
+                    <a href="{{menu.link}}">
                         {{menu.name}}
                     </a>
                 </li>
                 <li>
-                    <a class="waves-effect waves-light modal-trigger" href="#search">
+                    <a href="#modal_search" class="modal-trigger">
                         <i class="material-icons">search</i>
                     </a>
                 </li>
-            </ul>
+            </ul> <!-- End menu large screens -->
+            <!-- menu for mobile -->
+            <div class="side-nav small-screens" id="mobile-demo">
+                <div class="search">
+                    <a href="#modal_search" class="modal-trigger">
+                        <i class="material-icons">search</i>
+                    </a>
+                </div>
+                <ul class="center-align">
+                    <li class="active">
+                        <a href="#!/">
+                            <i class="material-icons small">home</i>
+                        </a>
+                    </li>
+                    <li ng-repeat="menu in $ctrl.menus">
+                        <a href="{{menu.link}}">
+                            {{menu.name}}
+                        </a>
+                    </li>
+                </ul><!-- end menu for mobile -->
+            </div>
         </div>
-    </nav>
-
+    </nav><!-- End menu top -->
     <div class="banner">
     </div>
+    <!-- Modal Seach -->
+    <div class="modal bottom-sheet" id="modal_search">
+        <div class="modal-content">
+            <form method="get" action="#" class="row">
+                <div class="input-field col s12 m9">
+                    <i class="material-icons prefix">search</i>
+                    <input id="search" type="text" class="validate">
+                    <label for="search">Bạn đang cần tìm kiếm</label>
+                </div>
+                <div class="col s12 m3 center">
+                    <button type="submit" class="btn">Tìm kiếm</button>
+                </div>
+            </form>
+        </div>
+    </div><!-- End modal search -->
 </header>
