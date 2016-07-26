@@ -2,6 +2,7 @@
   text-transform:uppercase;
   font-weight: bold;
 }
+$blemil-footer-margin:5px 0px;
 .blemil-footer{
   background: $blemil-blue !important;
  .blemil-footer-left{
@@ -11,7 +12,7 @@
    }
    .blemil-footer-information{
      li{
-       padding: 5px 0px;
+       padding:$blemil-footer-margin;
      .small-blemil-footer-information{
        margin-bottom:0px !important;
      }
@@ -19,4 +20,22 @@
    }
 
  }
+  .blemil-footer-right{
+     .button-register{
+       background: $blemil-orange !important;
+     }
+    .blemil-footer-right-social{
+      ul.nav-menu .list-menu{
+        padding:0px 10px;
+      }
+      margin-top:95px;
+      .first-li{
+        border-right:1px solid $blemil-white;
+      }
+      li{
+        padding:$blemil-footer-margin;
+        a{color:$blemil-white;}
+      }
+    }
+  }
 }
