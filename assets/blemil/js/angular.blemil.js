@@ -57,19 +57,44 @@ app.controller('ContactController', 'myService', function ($scope, myService) {
 //Header
 app.component('comHeader', {
     'templateUrl': 'inc/modules/header.html',
+
     controller: function blemil_header() {
+
         this.menus = [
             {
-                name: "Trang chủ",
-                link: "#!/"
+                name: "Về BT Foods",
+                link: "#!/about",
+                active: true
             },
             {
-                name: "Giới thiệu",
-                link: "#!/about"
+                name: "Câu truyện Blemil Plus",
+                link: "#!/truyen",
+                active: false
+            },
+            {
+                name: "Tìm hiểu Blemil Plus",
+                link: "#!/truyen",
+                active: false
+            },
+            {
+                name: "Quà tặng bé yêu",
+                link: "#!/truyen",
+                active: false
+            },
+            {
+                name: "Mua Blemil ở đâu",
+                link: "#!/truyen",
+                active: false
+            },
+            {
+                name: "Tin tức",
+                link: "#!/contact",
+                active: false
             },
             {
                 name: "Liên hệ",
-                link: "#!/contact"
+                link: "#!/contact",
+                active: false
             }
         ]
     }
