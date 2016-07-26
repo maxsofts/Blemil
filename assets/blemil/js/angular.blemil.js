@@ -9,17 +9,20 @@ app.config(['$locationProvider', '$routeProvider',
             .when('/', {
                 templateUrl: 'inc/pages/home.html',
                 controller: 'HomeController',
-                title: 'Trang chủ'
+                title: 'Trang chủ',
+                active: true
             })
             .when('/about', {
                 templateUrl: 'inc/pages/about.html',
                 controller: 'AboutController',
-                title: 'Giới thiệu'
+                title: 'Giới thiệu',
+                active: true
             })
             .when('/contact', {
                 templateUrl: 'inc/pages/contact.html',
                 controller: 'ContactController',
-                title: 'Liên hệ'
+                title: 'Liên hệ',
+                active: true
             })
             .otherwise({
                 redirectTo: '/'
@@ -64,32 +67,26 @@ app.component('comHeader', {
             {
                 name: "Về BT Foods",
                 link: "#!/about",
-                active: true
             },
             {
                 name: "Câu truyện Blemil Plus",
                 link: "#!/truyen",
-                active: false
             },
             {
                 name: "Tìm hiểu Blemil Plus",
                 link: "#!/truyen",
-                active: false
             },
             {
                 name: "Quà tặng bé yêu",
                 link: "#!/truyen",
-                active: false
             },
             {
                 name: "Mua Blemil ở đâu",
                 link: "#!/truyen",
-                active: false
             },
             {
                 name: "Tin tức",
                 link: "#!/contact",
-                active: false
             },
             {
                 name: "Liên hệ",

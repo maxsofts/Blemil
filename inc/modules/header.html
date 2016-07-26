@@ -5,18 +5,18 @@
                 <img src="assets/blemil/images/header/logo.png" alt="Logo" class="responsive-img"/>
             </a>
             <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="#!/">
+                <li class="active">
+                    <a href="#!/" class="waves-effect waves-light">
                         <i class="material-icons small">home</i>
                     </a>
                 </li>
-                <li ng-repeat="menu in $ctrl.menus" ng-class="{active: menu.active}">
-                    <a href="{{menu.link}}">
+                <li ng-repeat="menu in $ctrl.menus">
+                    <a href="{{menu.link}}" class="waves-effect waves-light">
                         {{menu.name}}
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="waves-effect waves-light modal-trigger" href="#search">
                         <i class="material-icons">search</i>
                     </a>
                 </li>
@@ -25,6 +25,5 @@
     </nav>
 
     <div class="banner">
-
     </div>
 </header>
