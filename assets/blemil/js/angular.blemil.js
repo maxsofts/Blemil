@@ -75,19 +75,19 @@ app.component('comHeader', {
                 link: "#!/about",
             },
             {
-                name: "Câu chuyện Blemil Plus",
+                name: "Câu chuyện Blemil",
                 link: "#!/truyen",
             },
             {
-                name: "Tìm hiểu Blemil Plus",
+                name: "Tìm hiểu Blemil",
                 link: "#!/truyen",
             },
             {
-                name: "Quà tặng bé yêu",
+                name: "Quà tặng ",
                 link: "#!/truyen",
             },
             {
-                name: "Mua Blemil ở đâu",
+                name: "Mua ở đâu",
                 link: "#!/truyen",
             },
             {

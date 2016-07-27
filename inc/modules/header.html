@@ -3,30 +3,32 @@
     <nav class="blemil-nav-top">
         <div class="nav-wrapper container">
             <a class="brand-logo">
-                <img src="assets/blemil/images/header/logo.png" alt="Logo" class="responsive-img"/>
+                <img alt="" src="assets/blemil/images/header/logo.png" alt="Logo" class="responsive-img"/>
             </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse right"><i
+            <a href="#" data-activates="side-mobile" class="button-collapse right"><i
                     class="material-icons">menu</i></a>
             <!-- menu for large screens -->
-            <ul class="right hide-on-med-and-down large-screens">
-                <li class="active">
-                    <a href="#!/">
-                        <i class="material-icons small">home</i>
-                    </a>
-                </li>
-                <li ng-repeat="menu in $ctrl.menus">
-                    <a href="{{menu.link}}">
-                        {{menu.name}}
-                    </a>
-                </li>
-                <li>
-                    <a href="#modal_search" class="modal-trigger">
-                        <i class="material-icons">search</i>
-                    </a>
-                </li>
-            </ul> <!-- End menu large screens -->
+            <div class="large-screens hide-on-med-and-down">
+                <ul class="right">
+                    <li class="active">
+                        <a href="#!/">
+                            <i class="material-icons small">home</i>
+                        </a>
+                    </li>
+                    <li ng-repeat="menu in $ctrl.menus">
+                        <a href="{{menu.link}}">
+                            {{menu.name}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#modal_search" class="modal-trigger">
+                            <i class="material-icons">search</i>
+                        </a>
+                    </li>
+                </ul> <!-- End menu large screens -->
+            </div>
             <!-- menu for mobile -->
-            <div class="side-nav small-screens" id="mobile-demo">
+            <div class="side-nav small-screens" id="side-mobile">
                 <div class="search">
                     <a href="#modal_search" class="modal-trigger">
                         <i class="material-icons">search</i>
@@ -47,8 +49,27 @@
             </div>
         </div>
     </nav><!-- End menu top -->
+    <!--hotline-->
+    <div class="container">
+        <div class="hotline right hide-on-med-and-down">
+            <div class="content">
+                <i class="material-icons">phone</i>
+                <p class="title">Chuyên gia tư vấn</p>
+                <a href="tel:1800.6698" class="mobile">1800 6698</a>
+            </div>
+        </div>
+    </div><!--endhotline-->
+
+    <!-- Banner -->
     <div class="banner">
-    </div>
+        <div class="milk">
+            <img alt="" src="assets/blemil/images/header/banner-background.png" class="responsive-img"/>
+        </div>
+        <div class=" logo">
+            <img alt="" src="assets/blemil/images/header/logo.png" class="responsive-img"/>
+            <img alt="" src="assets/blemil/images/header/logo-plus.png" class="responsive-img"/>
+        </div>
+    </div><!--End banner -->
     <!-- Modal Seach -->
     <div class="modal bottom-sheet" id="modal_search">
         <div class="modal-content">

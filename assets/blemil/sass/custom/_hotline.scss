@@ -1,0 +1,44 @@
+.hotline {
+  margin-bottom: -75px;
+  .content {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-image: -moz-linear-gradient(90deg, rgb(141, 198, 63) 0%, rgb(0, 148, 68) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(141, 198, 63) 0%, rgb(0, 148, 68) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(141, 198, 63) 0%, rgb(0, 148, 68) 100%);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    width: 235px;
+    height: 75px;
+    padding-left: 80px;
+    padding-top: 15px;
+    position: relative;
+    display: inline-block;
+    i {
+      position: absolute;
+      overflow: hidden;
+      background: $blemil-white;
+      border-radius: 10px;
+      padding: 10px;
+      left: 20px;
+      font-size: 2rem;
+      display: inline-block;
+      vertical-align: middle;
+      color: rgb(0, 148, 68);
+
+    }
+    .title {
+      display: inline-block;
+      color: $blemil-white;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin: 0;
+      font-family: "lato-medium", sans-serif;
+    }
+    a {
+      font-size: 20px;
+      color: $blemil-white;
+      font-weight: bold;
+      font-family: "billy-bold", sans-serif;
+    }
+  }
+}
