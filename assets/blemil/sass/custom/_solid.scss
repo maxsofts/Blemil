@@ -1,0 +1,25 @@
+/* --------------------------------------------------------
+Các đường gạch
+
+author: Tran Xuan Duc
+email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
+----------------------------------------------------------*/
+.solid {
+  margin-bottom: 0;
+
+  .solid-width-arrow {
+    background: $blemil-white;
+    height: 4px;
+    position: relative;
+    margin-bottom: 10px !important;
+    &:before {
+      border-top: 10px solid $blemil-white;
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      content: "";
+      left: 45%;
+      position: absolute;
+      text-align: center;
+    }
+  }
+}

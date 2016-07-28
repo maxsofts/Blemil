@@ -1,3 +1,53 @@
 .readmore {
   margin: 20px 0;
 }
+
+.bg-gift {
+  margin-top: 20px;
+  background-image: url('../images/main-home/gift.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 150px 160px;
+  @media screen and (max-width: 1024px) {
+    background-size: 80%;
+  }
+  .content {
+    position: relative;
+
+    img {
+      border-radius: 30px;
+    }
+    .param {
+      position: absolute;
+      font-size: 1rem;
+      font-family: "lato-bold", "Roboto", sans-serif;
+      color: $blemil-white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      padding: 30px;
+      bottom: 0;
+      width: 100%;
+      background-image: -moz-linear-gradient(90deg, $blemil-blue 0%, $blemil-transparent 100%);
+      background-image: -webkit-linear-gradient(90deg, $blemil-blue 0%, $blemil-transparent 100%);
+      background-image: -ms-linear-gradient(90deg, $blemil-blue 0%, $blemil-transparent 100%);
+
+    }
+    .chicken {
+      position: absolute;
+      right: -285px;
+      bottom: 20px;
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+.location {
+  background-image: url('../images/main-home/gift.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100%;
+}

@@ -3,7 +3,7 @@
   border-right: 0;
   border-left: 0;
   border-top: 5px $blemil-blue dashed;
-
+  margin-bottom: 30px;
   @each $color_name, $color in $colors {
     @each $color_type, $color_value in $color {
       @if $color_type == "base" {
@@ -23,7 +23,11 @@
   &.fieldset-width-box {
     legend {
       min-width: 350px;
+      @media screen and (max-width: $small-screen) {
+        min-width: inherit;
+      }
     }
+
   }
 
 }

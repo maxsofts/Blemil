@@ -7,7 +7,9 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
 .banner {
   position: relative;
   .milk {
-
+    img{
+      width: 100%;
+    }
   }
   .logo {
     position: absolute;
@@ -46,6 +48,7 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
     .chicken {
       position: absolute;
       top: 15%;
+      left: 0;
     }
     .bottle {
       max-width: 500px;

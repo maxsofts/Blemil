@@ -32,12 +32,13 @@ $blemil-gray-color: (
 $blemil-green-color: (
         "base": #009444,
         "lighten-1":#00c342,
+        "lighten-2":#71d73d,
 );
 $shades: (
         "black": #000000,
         "white": #FFFFFF,
         "bluesecond":#67a0d0,
-        "transparent": transparent
+        "transparent": rgba(249, 249, 249, 0),
 );
 
 $colors: (

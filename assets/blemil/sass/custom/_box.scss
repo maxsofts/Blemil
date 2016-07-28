@@ -10,10 +10,12 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
   text-align: center;
   color: $blemil-white;
   font-family: "lato-black", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border: 7px $blemil-blue solid;
   border-radius: 20px;
   padding: 0 !important;
+  white-space: nowrap;
+  overflow: hidden;
   .param {
     border: 2px $blemil-white dashed;
     padding: 20px 0 !important;
@@ -55,18 +57,13 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
 .shadow-box {
   background: $blemil-white; /* For browsers that do not support gradients */
   /* For Safari 5.1 to 6.0 */
-  background: -webkit-radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+  background: -webkit-radial-gradient($blemil-white, $blemil-white, $blemil-transparent);
   /* For Opera 11.1 to 12.0 */
-  background: -o-radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+  background: -o-radial-gradient($blemil-white, $blemil-white, $blemil-transparent);
   /* For Fx 3.6 to 15 */
-  background: -moz-radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+  background: -moz-radial-gradient($blemil-white, $blemil-white, $blemil-transparent);
   /* Standard syntax */
-  background: radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
-
-  background: -webkit-linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* Standard syntax */
+  background: radial-gradient($blemil-white, $blemil-white, $blemil-transparent);
 
   @each $color_name, $color in $colors {
     @each $color_type, $color_value in $color {
@@ -74,37 +71,25 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
         &.#{$color_name} {
           background: $color_value; /* For browsers that do not support gradients */
           /* For Safari 5.1 to 6.0 */
-          background: -webkit-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          background: -webkit-radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
           /* For Opera 11.1 to 12.0 */
-          background: -o-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          background: -o-radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
           /* For Fx 3.6 to 15 */
-          background: -moz-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          background: -moz-radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
           /* Standard syntax */
-          background: radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
-
-          background: -webkit-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Safari 5.1 to 6.0 */
-          background: -o-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Opera 11.1 to 12.0 */
-          background: -moz-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Firefox 3.6 to 15 */
-          background: linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* Standard syntax */
-
+          background: radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
         }
       } @else {
         &.#{$color_name}.#{$color_type} {
           background: $color_value; /* For browsers that do not support gradients */
           /* For Safari 5.1 to 6.0 */
-          background: -webkit-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          background: -webkit-radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
           /* For Opera 11.1 to 12.0 */
-          background: -o-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          background: -o-radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
           /* For Fx 3.6 to 15 */
-          background: -moz-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          background: -moz-radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
           /* Standard syntax */
-          background: radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
-
-          background: -webkit-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Safari 5.1 to 6.0 */
-          background: -o-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Opera 11.1 to 12.0 */
-          background: -moz-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Firefox 3.6 to 15 */
-          background: linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* Standard syntax */
-
+          background: radial-gradient($color_value, $color_value, $color_value, $color_value, $blemil-transparent);
         }
       }
     }
@@ -143,7 +128,6 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
       }
     }
   }
-
   .research-trapezoid {
     position: relative;
     padding: 60px;
@@ -151,23 +135,99 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
       position: absolute;
       padding-top: 50px;
     }
+    .logo {
+      color: $blemil-white;
+      font-family: "lato-black", sans-serif;
+      font-size: 2rem;
+      text-shadow: 1px 1px $blemil-black;
+
+      i.logo-blemil {
+        vertical-align: middle;
+      }
+
+      span {
+        padding-left: 10px;
+      }
+    }
     .products-right {
       position: absolute;
       width: 50%;
-      float: left;
       z-index: 999999;
-      img{
-        position: absolute;
-      }
-      .chicken{
-        max-width: 60px;
+      img {
+        &.blemil-product {
+          margin-top: -90px;
+          margin-left: 15px;
+          margin-bottom: -50px;
+        }
+        &.chicken {
+          position: absolute;
+          max-height: 85px;
+          right: 125px;
+        }
       }
     }
     .products-left {
       position: absolute;
-      width: 50%;
-      float: left;
+      width: 40%;
+      margin-left: 40%;
       z-index: 999999;
+
+      img {
+        &.blemil-product {
+          margin-top: -90px;
+          margin-left: 15px;
+          margin-bottom: -50px;
+        }
+        &.chicken {
+          position: absolute;
+          max-height: 85px;
+          left: 90px;
+        }
+      }
+    }
+
+  }
+
+  .research-trapezoid-mobile {
+    position: relative;
+    padding-bottom: 30px;
+
+    .logo {
+      color: $blemil-white;
+      font-family: "lato-black", sans-serif;
+      font-size: 2rem;
+      text-shadow: 1px 1px $blemil-black;
+      position: relative;
+      top: 100px;
+
+      @media screen and (max-width: 376px) {
+        top: 80px;
+      }
+      i.logo-blemil {
+        vertical-align: middle;
+      }
+
+      span {
+        padding-left: 10px;
+      }
+    }
+
+    .blemil-product {
+      position: absolute;
+      max-width: 80px;
+      left: 42%;
+      @media screen and (max-width: 376px) {
+        max-width: 60px;
+      }
+    }
+    .readmore {
+      position: relative;
+      top: 110px;
+      margin: 0;
+
+      @media screen and (max-width: 376px) {
+        top: 80px;
+      }
     }
   }
 }
@@ -175,4 +235,13 @@ email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
 .logo-blemil {
   width: 95px;
   content: url('../images/header/logo.png');
+  &.large {
+    width: 120px;
+  }
+  &.medium {
+    width: 80px;
+  }
+  &.tiny {
+    width: 50px;
+  }
 }
