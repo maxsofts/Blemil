@@ -1,0 +1,81 @@
+/*
+author:Congdonglangsoi
+*/
+$min-radius: 1;
+$max-radius: 20;
+@for $i from $min-radius through $max-radius {
+  .border-radius-#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+
+/* --------------------------------------------------------
+Button
+
+author: Tran Xuan Duc
+email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
+----------------------------------------------------------*/
+.btn-readmore {
+  background: $blemil-white;
+  border: 1px $blemil-blue solid;
+  position: relative;
+  padding: 5px 20px 5px 20px;
+  border-radius: 4px;
+  position: relative;
+  color: $blemil-blue;
+  font-size: 12px;
+  @include bold;
+  &:before {
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+    position: absolute;
+    top: 75%;
+    line-height: 1;
+    left: 40%;
+    font-size: 1rem;
+    background: $blemil-white;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        &.#{$color_name} {
+          background-color: $color_value !important;
+          border: 1px $blemil-white solid;
+          color: $blemil-white;
+          &:before {
+            background: $color_value !important;
+          }
+        }
+
+        &.#{$color_name}-text {
+          background-color: $blemil-white !important;
+          border: 1px $color_value solid;
+
+          &:before {
+            background: $blemil-white !important;
+          }
+        }
+      } @else {
+        .#{$color_name}.#{$color_type} {
+          background-color: $color_value !important;
+          border: 1px $blemil-white solid;
+          color: $blemil-white;
+          &:before {
+            background: $color_value !important;
+          }
+        }
+        &.#{$color_name}-text {
+          background-color: $blemil-white !important;
+          border: 1px $color_value solid;
+
+          &:before {
+            background: $blemil-white !important;
+          }
+        }
+      }
+    }
+  }
+}

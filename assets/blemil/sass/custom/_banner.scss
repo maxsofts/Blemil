@@ -1,3 +1,9 @@
+/* --------------------------------------------------------
+Banner
+
+author: Tran Xuan Duc
+email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
+----------------------------------------------------------*/
 .banner {
   position: relative;
   .milk {
@@ -8,5 +14,44 @@
     top: 10%;
     left: 40%;
 
+    .plus {
+      position: absolute;
+      width: 355px;
+      left: -75px;
+      top: 0;
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    p.hide-on-med-and-down {
+      width: 35%;
+      font-size: 1.2rem;
+      text-align: right;
+      text-justify: auto;
+    }
+    p.hide-on-large-only {
+      margin-left: -20%;
+      margin-top: -5%;
+      width: 95%;
+    }
+  }
+
+  .products {
+    position: absolute;
+    left: 40%;
+    bottom: 15%;
+    .chicken {
+      position: absolute;
+      top: 15%;
+    }
+    .bottle {
+      max-width: 500px;
+      margin-left: 150px;
+    }
   }
 }
+
+

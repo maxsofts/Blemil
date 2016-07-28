@@ -19,14 +19,32 @@ $blemil-primary: (
         "opacity-09": rgba(27, 117, 188, .9)
 );
 
+$blemil-pink-color: (
+        "base":#ec018c
+);
+
+$blemil-gray-color: (
+        "base": #cccccc,
+        "darken-1": #999999,
+        "darken-2": #666666,
+        "darken-3": #333333,
+);
+$blemil-green-color: (
+        "base": #009444,
+        "lighten-1":#00c342,
+);
 $shades: (
         "black": #000000,
         "white": #FFFFFF,
+        "bluesecond":#67a0d0,
         "transparent": transparent
 );
 
 $colors: (
         "blemil-primary": $blemil-primary,
+        "blemil-pink": $blemil-pink-color,
+        "blemil-gray":$blemil-gray-color,
+        "blemil-green":$blemil-green-color,
         "shades": $shades
 );
 
@@ -48,6 +66,7 @@ $colors: (
       .#{$color_name}-text.text-#{$color_type} {
         color: $color_value !important;
       }
+
     }
   }
 }
@@ -58,6 +77,9 @@ $colors: (
     background-color: $color_value !important;
   }
   .#{$color}-text {
+    color: $color_value !important;
+  }
+  .#{$color}-text a {
     color: $color_value !important;
   }
 }

@@ -1,0 +1,178 @@
+/* --------------------------------------------------------
+Box
+
+author: Tran Xuan Duc
+email: duc.tran@maxgroup.vn or ductranxuan.29710@gmail.com
+----------------------------------------------------------*/
+.border-box {
+  @include bold();
+  background: $blemil-blue;
+  text-align: center;
+  color: $blemil-white;
+  font-family: "lato-black", sans-serif;
+  font-size: 1.5rem;
+  border: 7px $blemil-blue solid;
+  border-radius: 20px;
+  padding: 0 !important;
+  .param {
+    border: 2px $blemil-white dashed;
+    padding: 20px 0 !important;
+    border-radius: 20px;
+    &:after, &:before {
+      content: " • ";
+      padding: 0 10px;
+    }
+  }
+
+  &.border-box-before {
+    margin-top: -80px;
+    .param {
+      padding-top: 50px !important;
+
+      @media screen and (max-width: $small-screen) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        &.#{$color_name} {
+          background-color: $color_value !important;
+          border: 7px $color_value solid;
+        }
+      } @else {
+        .#{$color_name}.#{$color_type} {
+          background-color: $color_value !important;
+          border: 7px $color_value solid;
+        }
+      }
+    }
+  }
+}
+
+.shadow-box {
+  background: $blemil-white; /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+  /* For Opera 11.1 to 12.0 */
+  background: -o-radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+  /* For Fx 3.6 to 15 */
+  background: -moz-radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+  /* Standard syntax */
+  background: radial-gradient($blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent);
+
+  background: -webkit-linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, transparent, $blemil-white, $blemil-white, $blemil-white, $blemil-white, $blemil-white, transparent); /* Standard syntax */
+
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        &.#{$color_name} {
+          background: $color_value; /* For browsers that do not support gradients */
+          /* For Safari 5.1 to 6.0 */
+          background: -webkit-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          /* For Opera 11.1 to 12.0 */
+          background: -o-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          /* For Fx 3.6 to 15 */
+          background: -moz-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          /* Standard syntax */
+          background: radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+
+          background: -webkit-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Safari 5.1 to 6.0 */
+          background: -o-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Opera 11.1 to 12.0 */
+          background: -moz-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Firefox 3.6 to 15 */
+          background: linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* Standard syntax */
+
+        }
+      } @else {
+        &.#{$color_name}.#{$color_type} {
+          background: $color_value; /* For browsers that do not support gradients */
+          /* For Safari 5.1 to 6.0 */
+          background: -webkit-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          /* For Opera 11.1 to 12.0 */
+          background: -o-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          /* For Fx 3.6 to 15 */
+          background: -moz-radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+          /* Standard syntax */
+          background: radial-gradient($color_value, $color_value, $color_value, $color_value, transparent);
+
+          background: -webkit-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Safari 5.1 to 6.0 */
+          background: -o-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Opera 11.1 to 12.0 */
+          background: -moz-linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* For Firefox 3.6 to 15 */
+          background: linear-gradient(-90deg, transparent, $color_value, $color_value, $color_value, $color_value, $color_value, transparent); /* Standard syntax */
+
+        }
+      }
+    }
+  }
+
+  &.box-width-chicken {
+    padding-left: 12%;
+    position: relative;
+    padding-right: 12%;
+    img {
+      &.chicken-left {
+        position: absolute;
+        overflow: hidden;
+        left: -100px;
+        top: 40%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &.chicken-right {
+        position: absolute;
+        overflow: hidden;
+        right: -110px;
+        top: 40%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+    }
+
+    .box-content {
+      padding: 20px;
+      position: relative;
+      .param {
+        text-align: justify;
+        text-align-last: center;
+      }
+    }
+  }
+
+  .research-trapezoid {
+    position: relative;
+    padding: 60px;
+    img.trapezoid {
+      position: absolute;
+      padding-top: 50px;
+    }
+    .products-right {
+      position: absolute;
+      width: 50%;
+      float: left;
+      z-index: 999999;
+      img{
+        position: absolute;
+      }
+      .chicken{
+        max-width: 60px;
+      }
+    }
+    .products-left {
+      position: absolute;
+      width: 50%;
+      float: left;
+      z-index: 999999;
+    }
+  }
+}
+
+.logo-blemil {
+  width: 95px;
+  content: url('../images/header/logo.png');
+}

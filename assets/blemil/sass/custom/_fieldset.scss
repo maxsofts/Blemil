@@ -1,0 +1,29 @@
+.fieldset {
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  border-top: 5px $blemil-blue dashed;
+
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        &.#{$color_name} {
+          border-top: 5px $color_value dashed !important;
+          background: inherit !important;
+        }
+      } @else {
+        .#{$color_name}.#{$color_type} {
+          border-top: 5px $color_value dashed !important;
+          background: inherit !important;
+        }
+      }
+    }
+  }
+
+  &.fieldset-width-box {
+    legend {
+      min-width: 350px;
+    }
+  }
+
+}
